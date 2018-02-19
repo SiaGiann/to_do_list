@@ -101,6 +101,19 @@
   </div>
 
   <script>
+    function toggleDone() {
+    var checkbox = this;
+
+    // check the checked status of the checkbox
+    if (checkbox.checked) {
+      // the "completed" class is set on the parent element, the <li>
+      checkbox.parentElement.className = "todo completed";
+    } else {
+      checkbox.parentElement.className = "todo";
+    }
+
+    updateCounters();
+  }
       // select the element containing the count
     var totalCount = document.getElementById('total-count');
 
